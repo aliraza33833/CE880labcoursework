@@ -1,0 +1,56 @@
+Notebook: https://colab.research.google.com/drive/1fiHrJrRv8k-AlnQGPdA0vcxsJZvrx_dP#scrollTo=LsDYGfVS2P2K
+
+Use case: Fetal health classification
+
+Data: Linear tabular data
+
+
+file uploading in current directory of Colab
+Imported all the required libraries
+
+
+DATA LOADING
+	- file loading & data visualize [cell:2]
+	- retrieved some insights about data to check if any value is missing [cell:3, 4]
+
+
+
+
+EXPLORATORY DATA ANALYSIS (EDA)
+	- Null values removal
+No null values found
+
+	- Feature exploration
+	- Feature engineering	
+Used StatsModel lib to provide better insights of data and identify which features actually contribute towards the classification of target class.
+Loaded all the feature cloumns and ran OLS Regression test. (Ordinary Least Squares)
+Seeing the model summary we concluded that the features having P-value (P>|t|) less than 0.05 threshold can be considered irrelevent to the target class that we are trying to classify.
+Also we saw that the R-squared value is	0.607 that tells, are regression is very well explaining the target class. 
+R-Squared value is found to check if the regression is even related to the target class or not. its value is between 0 and 1. its 0 if regression does not explain the target and 1 when reression totaly explains the target (unreal). [Cell:6]
+
+	- Feature selection
+	- Feature normaliztion/ standardization
+Normalize all the feature values. [Cell:7]
+
+	- Test Train split 
+Divided the dataset in test-train split of (85:15) [Cell:8]
+
+
+
+
+MODEL SELECTION AND BUILDING
+	-Ran Supervised learning for 
+	-Logistic regression
+	-Desicion Tree
+	-Random forest
+	-Support Vector Classification
+	-K-NearestNeighbors
+Setup up Sklearn-pipelines for separate classifier to fit data and predict results with accuracy.[cell:10]
+
+	-Artifical Neural network
+Built using Keras with three hidden layers and Relu activation function. [cell:11]
+
+
+
+
+
